@@ -1,0 +1,21 @@
+body {
+  margin: 0px;
+}
+.main {
+  overflow: hidden;
+}
+.bg {
+  height: 100vh;
+  background-color: #240130;
+  /* background-color: #ffffff; */
+  position: relative;
+}
+.bg-half {
+  min-height: 100vh;
+  background-color: #000000;
+  position: absolute;
+  top: 55%;
+  left: -250px;
+  width: 150%;
+  filter: blur(61px);
+}
