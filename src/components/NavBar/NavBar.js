@@ -1,12 +1,13 @@
 import React from "react";
 import "./NavBar.css";
+// import logo from "./assets/logo.png";
 
 const NavBar = () => {
   return (
     <div className="mainN">
-      <div></div>
+      <img src="./logo.png" alt="Logo" className="Logo" />
 
-      <div>settings</div>
+      <div className="settings">Settings</div>
     </div>
   );
 };
