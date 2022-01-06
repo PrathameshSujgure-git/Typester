@@ -1,0 +1,58 @@
+.keyboard {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 60%;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  height: 3em;
+  width: 3em;
+  background-color: #fff;
+  border-radius: 0.4em;
+  line-height: 3em;
+  margin: 0.4em;
+  text-align: center;
+  font-size: 1em;
+}
+
+#tab {
+  width: 5em;
+}
+
+#caps {
+  width: 6em;
+}
+
+#left-shift {
+  width: 8em;
+}
+
+#enter {
+  width: 6em;
+}
+
+#right-shift {
+  width: 8em;
+}
+
+#back {
+  width: 5em;
+}
+
+.row {
+  display: flex;
+  margin: 0px;
+  justify-content: center;
+}
+.pressed {
+  color: crimson;
+  border: 2px solid crimson;
+}
+.pinky {
+  background-color: crimson;
+  border: 2px solid crimson;
+}

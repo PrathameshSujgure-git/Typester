@@ -11,8 +11,10 @@
   width: 200px;
   height: auto;
   margin: 10px;
+  padding-left: 20px;
 }
 .settings {
   font-size: 20px;
   margin: 10px;
+  padding-right: 20px;
 }
