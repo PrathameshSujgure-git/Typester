@@ -2,38 +2,50 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./Keyboard.css";
 
-function useKeyPress(targetKey) {
-  const [keyPressed, setKeyPressed] = useState(false);
-  function keyDownHandler({ key }) {
-    if (key === targetKey) {
-      setKeyPressed(true);
-    }
-  }
-  function keyUpHandler({ key }) {
-    if (key === targetKey) {
-      setKeyPressed(false);
-    }
-  }
-  useEffect(() => {
-    window.addEventListener("keydown", keyDownHandler);
-    window.addEventListener("keyup", keyUpHandler);
+// function useKeyPress(targetKey) {
+//   const [keyPressed, setKeyPressed] = useState(false);
+//   console.log(keyPressed);
+//   function keyDownHandler({ key }) {
+//     if (key === targetKey) {
+//       setKeyPressed(true);
+//     }
+//   }
+//   function keyUpHandler({ key }) {
+//     if (key === targetKey) {
+//       setKeyPressed(false);
+//     }
+//   }
+//   useEffect(() => {
+//     window.addEventListener("keydown", keyDownHandler);
+//     window.addEventListener("keyup", keyUpHandler);
 
-    return () => {
-      window.removeEventListener("keydown", keyDownHandler);
-      window.removeEventListener("keyup", keyUpHandler);
-    };
-  });
-  return keyPressed;
-}
+//     return () => {
+//       window.removeEventListener("keydown", keyDownHandler);
+//       window.removeEventListener("keyup", keyUpHandler);
+//     };
+//   });
+
+//   return keyPressed;
+//   // console.log(keyPressed);
+// }
 
 function Keyboard() {
-  const whichKeyPressed = useKeyPress("Escape");
-  console.log(whichKeyPressed);
+  document.addEventListener("keyup", (e) => {
+    const keyPressed = e.code;
+    const keyElement = document.getElementById(keyPressed);
+    keyElement.classList.toggle("pressed");
+    // console.log(keyElement.classList);
+  });
+  document.addEventListener("keydown", (e) => {
+    const keyPressed = e.code;
+    const keyElement = document.getElementById(keyPressed);
+    keyElement.classList.toggle("pressed");
+  });
 
   return (
     <div className="keyboard">
       <ul className="row row-0">
-        <li className={whichKeyPressed ? "pressed" : "pinky"} id="Escape">
+        <li className="pinky" id="Escape">
           ESC
         </li>
         <li className="pinky" id="Digit1">
@@ -178,6 +190,28 @@ function Keyboard() {
         <li className="pinky" id="right-shift">
           SHIFT
         </li>
+      </ul>
+      <ul className="row row-4">
+        <li className="pinky" id="left-ctrl">
+          CTRL
+        </li>
+        <li className="pinky" id="fn">
+          fn
+        </li>
+        <li className="ring" id="win">
+          Win
+        </li>
+        <li className="middle" id="left-alt">
+          ALT
+        </li>
+        <li className="pointer1st" id="space-bar"></li>
+        <li className="pointer2nd" id="right-alt">
+          ALT
+        </li>
+        <li className="pointer2nd" id="right-ctrl">
+          CTRL
+        </li>
+        <li className="pointer1st" id="arrow"></li>
       </ul>
     </div>
   );
