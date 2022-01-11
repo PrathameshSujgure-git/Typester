@@ -22,42 +22,39 @@ li {
   font-size: 1em;
 }
 
-#tab {
+#Tab {
   width: 5em;
 }
 
-#caps {
+#CapsLock {
   width: 6em;
 }
 
-#left-shift {
+#ShiftLeft,
+#ShiftRight {
   width: 8em;
 }
 
-#enter {
+#Enter {
   width: 6em;
 }
 
-#right-shift {
-  width: 8em;
-}
-
-#back {
+#Backspace {
   width: 5em;
 }
 
-#win,
-#left-alt,
-#right-alt,
-#right-ctrl,
-#left-ctrl,
+#OSLeft,
+#AltLeft,
+#AltRight,
+#ControlLeft,
+#ControlRight,
 #fn {
   width: 50px;
 }
-#space-bar {
-  width: 376px;
+#Space {
+  width: 430px;
 }
-#arrow {
+#Arrow {
   width: 120px;
 }
 .row {
@@ -69,6 +66,14 @@ li {
 .pinky {
   background-color: crimson;
   border: 2px solid crimson;
+  height: 3em;
+  width: 3em;
+  /* background-color: #fff; */
+  border-radius: 0.4em;
+  line-height: 3em;
+  margin: 0.4em;
+  text-align: center;
+  font-size: 1em;
 }
 
 .pressed {
