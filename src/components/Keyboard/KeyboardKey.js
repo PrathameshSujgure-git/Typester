@@ -2,7 +2,11 @@ import React from "react";
 import "./KeyboardKey.css";
 
 const KeyboardKey = (props) => {
-  return <div id={props.keyID}>{props.keyName}</div>;
+  return (
+    <li className={props.keyClass} id={props.keyID}>
+      {props.keyName}
+    </li>
+  );
 };
 
 export default KeyboardKey;

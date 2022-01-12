@@ -10,7 +10,6 @@ const MainPage = () => {
         <div className="main">
           <div className="bg">
             <NavBar />
-
             <div className="bg-half"></div>
             <Keyboard />
           </div>

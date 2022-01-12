@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import "./Keyboard.css";
 import "./KeyboardKey.css";
 import {
@@ -11,8 +11,6 @@ import {
   NameKeysClass,
 } from "../../global/constants";
 import KeyboardKey from "./KeyboardKey";
-
-import _ from "lodash";
 
 // function useKeyPress(targetKey) {
 //   const [keyPressed, setKeyPressed] = useState(false);
@@ -59,7 +57,14 @@ const Keyboard = () => {
   const generateKeyboard = (objectName) => {
     return Object.keys(objectName).map((k, i) => {
       // console.log(i, k, objectName[k]);
-      return <KeyboardKey keyID={k} key={i} keyName={objectName[k]} />;
+      return (
+        <KeyboardKey
+          keyClass={NameKeysClass[k]}
+          keyID={k}
+          key={i}
+          keyName={objectName[k]}
+        />
+      );
     });
   };
 
