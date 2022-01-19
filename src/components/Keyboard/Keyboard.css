@@ -12,14 +12,17 @@ ul {
   list-style-type: none;
 }
 li {
+  font-family: "Cormorant Garamond", serif;
   height: 3em;
   width: 3em;
-  background-color: #fff;
   border-radius: 0.4em;
   line-height: 3em;
   margin: 0.4em;
   text-align: center;
   font-size: 1em;
+  box-shadow: inset 1px -1px 4px rgba(0, 0, 0, 0.25),
+    inset -1px 1px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid #5a5a5a;
 }
 
 #Tab {
@@ -65,31 +68,29 @@ li {
 
 .lilF {
   background-color: #916eca;
-  border: 2px solid #916eca;
 }
 .rF {
   background-color: #d05fad;
-  border: 2px solid #d05fad;
 }
 .mF {
   background-color: #f2698b;
-  border: 2px solid #f2698b;
 }
 .iF {
   background-color: #fd9e7e;
-  border: 2px solid #fd9e7e;
 }
 .thumbF {
   background-color: #edba5e;
-  border: 2px solid #edba5e;
 }
 .pressed {
-  scale: 90%;
+  scale: 95%;
   color: white;
-  opacity: 90%;
-  border: 2px solid white;
+  /* font-weight: 800; */
+  /* opacity: 0.9; */
+  border: 2px solid #3a3a3a;
   /* filter: invert(1); */
   /* filter: drop-shadow(0 0 1rem #00ff00); */
+  box-shadow: inset 4px -4px 4px rgba(0, 0, 0, 0.25),
+    inset -4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #CapsLock {
   position: relative;
@@ -104,4 +105,16 @@ li {
   position: absolute;
   right: 5px;
   top: 5px;
+}
+#CapsLock.on::before {
+  content: "";
+  background-color: #00ff00;
+  border-radius: 45px;
+  border: 1px solid black;
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  filter: blur(0.4px);
 }

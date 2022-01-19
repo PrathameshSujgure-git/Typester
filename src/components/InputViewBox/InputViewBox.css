@@ -1,0 +1,42 @@
+.ok {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 40%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.view-port {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  margin: 0 0 20px 40px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.text-display {
+  display: flex;
+  color: white;
+  width: 100%;
+  /* height: 5%; */
+  text-align: center;
+  font-size: 20px;
+}
+.view-input {
+  color: white;
+  display: flex;
+  resize: none;
+  width: 66%;
+  background-color: transparent;
+  padding: 0 10px;
+  height: 10%;
+  font-size: 25px;
+  line-height: 33px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}

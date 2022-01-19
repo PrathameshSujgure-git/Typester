@@ -52,6 +52,11 @@ const Keyboard = () => {
     // console.log(e.code); //To check code of button pressed
     const keyElement = document.getElementById(keyPressed);
     keyElement && keyElement.classList.toggle("pressed");
+
+    if (keyPressed === "CapsLock") {
+      keyElement && keyElement.classList.toggle("on");
+    }
+    //getmodifierstate
   });
 
   const generateKeyboard = (objectName) => {
