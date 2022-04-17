@@ -1,0 +1,82 @@
+.ok {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 40%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.view-port {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  margin: 0 0 20px 40px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.text-display {
+  background-image: url("../../assets/viewbox-bg.jpg");
+  background-size: cover;
+  background-color: #ece5d3;
+  /* display: flex; */
+  /* text-decoration: underline; */
+  color: #47331b;
+  width: 100%;
+  /* height: 100px; */
+  border-radius: 5px;
+  padding: 13px 30px;
+  line-height: 19px;
+  /* height: 5%; */
+  text-align: center;
+  font-size: 20px;
+  user-select: none;
+}
+
+.view-input {
+  user-select: none;
+  color: white;
+  display: flex;
+  resize: none;
+  width: 66%;
+  background-color: transparent;
+  padding: 0 10px;
+  height: 10%;
+  font-size: 25px;
+  line-height: 33px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.view-box {
+  display: flex;
+  align-items: center;
+}
+.view-box button {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  color: red;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.correct {
+  color: green;
+  text-decoration: none;
+  background-color: transparent;
+}
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
+.current {
+  font-weight: 900;
+  text-decoration: underline;
+  /* background-color: #966b37; */
+  color: black;
+  /* padding: 0 1px; */
+  border-radius: 3px;
+}
