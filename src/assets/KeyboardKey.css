@@ -1,0 +1,10 @@
+li {
+  height: 3em;
+  width: 3em;
+  background-color: white;
+  border-radius: 0.4em;
+  line-height: 3em;
+  margin: 0.4em;
+  text-align: center;
+  font-size: 1em;
+}
