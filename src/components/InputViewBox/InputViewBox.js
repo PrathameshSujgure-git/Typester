@@ -15,7 +15,7 @@ import KAudio11 from "../../assets/audio/k11(1).mp3";
 import KAudio12 from "../../assets/audio/k12(1).mp3";
 import KAudio13 from "../../assets/audio/k13(1).mp3";
 import ErrorAudio from "../../assets/audio/error.mp3";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
+// import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 const KAudioArray = [
   // KAudio1,
@@ -32,21 +32,21 @@ const KAudioArray = [
   KAudio12,
   KAudio13,
 ];
-const KAudioArray2 = [
-  KAudio1,
-  KAudio2,
-  // KAudio3,
-  // KAudio4,
-  KAudio5,
-  KAudio6,
-  KAudio7,
-  KAudio8,
-  // KAudio9,
-  // KAudio10,
-  // KAudio11,
-  // KAudio12,
-  // KAudio13,
-];
+// const KAudioArray2 = [
+//   KAudio1,
+//   KAudio2,
+//   // KAudio3,
+//   // KAudio4,
+//   KAudio5,
+//   KAudio6,
+//   KAudio7,
+//   KAudio8,
+//   // KAudio9,
+//   // KAudio10,
+//   // KAudio11,
+//   // KAudio12,
+//   // KAudio13,
+// ];
 
 const InputViewBox = () => {
   const [value, setValue] = useState(Math.floor(Math.random() * 6));
@@ -87,6 +87,24 @@ const InputViewBox = () => {
     quoteInputElement.value = null;
   };
   useEffect(() => {
+    const renderNewQuote = (i = 0) => {
+      if (i === -1 && value === 0) {
+        setValue(InputDisplayTexts.length - 1);
+      } else if (i === 1 && value === InputDisplayTexts.length - 1) {
+        setValue(0);
+      } else setValue(value + i);
+      const quoteDisplayElement = document.getElementById("textDisplay");
+      const quoteInputElement = document.getElementById("textInput");
+      const quote = InputDisplayTexts[value];
+      quoteDisplayElement.innerHTML = "";
+      quote.split("").forEach((char) => {
+        const charSpan = document.createElement("span");
+
+        charSpan.innerText = char;
+        quoteDisplayElement.appendChild(charSpan);
+      });
+      quoteInputElement.value = null;
+    };
     renderNewQuote();
     document.getElementById("button").click();
   }, []);
