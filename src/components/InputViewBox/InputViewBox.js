@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./InputViewBox.css";
 import { InputDisplayTexts } from "../../global/constants";
-import KAudio1 from "../../assets/audio/k1(1).mp3";
-import KAudio2 from "../../assets/audio/k2(1).mp3";
+// import KAudio1 from "../../assets/audio/k1(1).mp3";
+// import KAudio2 from "../../assets/audio/k2(1).mp3";
 import KAudio3 from "../../assets/audio/k3(1).mp3";
 import KAudio4 from "../../assets/audio/k4(1).mp3";
-import KAudio5 from "../../assets/audio/k5(1).mp3";
-import KAudio6 from "../../assets/audio/k6(1).mp3";
-import KAudio7 from "../../assets/audio/k7(1).mp3";
-import KAudio8 from "../../assets/audio/k8(1).mp3";
+// import KAudio5 from "../../assets/audio/k5(1).mp3";
+// import KAudio6 from "../../assets/audio/k6(1).mp3";
+// import KAudio7 from "../../assets/audio/k7(1).mp3";
+// import KAudio8 from "../../assets/audio/k8(1).mp3";
 import KAudio9 from "../../assets/audio/k9(1).mp3";
 import KAudio10 from "../../assets/audio/k10(1).mp3";
 import KAudio11 from "../../assets/audio/k11(1).mp3";
@@ -87,24 +87,6 @@ const InputViewBox = () => {
     quoteInputElement.value = null;
   };
   useEffect(() => {
-    const renderNewQuote = (i = 0) => {
-      if (i === -1 && value === 0) {
-        setValue(InputDisplayTexts.length - 1);
-      } else if (i === 1 && value === InputDisplayTexts.length - 1) {
-        setValue(0);
-      } else setValue(value + i);
-      const quoteDisplayElement = document.getElementById("textDisplay");
-      const quoteInputElement = document.getElementById("textInput");
-      const quote = InputDisplayTexts[value];
-      quoteDisplayElement.innerHTML = "";
-      quote.split("").forEach((char) => {
-        const charSpan = document.createElement("span");
-
-        charSpan.innerText = char;
-        quoteDisplayElement.appendChild(charSpan);
-      });
-      quoteInputElement.value = null;
-    };
     renderNewQuote();
     document.getElementById("button").click();
   }, []);
